@@ -1,0 +1,26 @@
+//Write a function to get biggest between 2 numbers.
+import java.util.Scanner;
+import java.util.InputMismatchException;
+
+public class BiggestOfTwo {
+
+	public static void main(String[] args) {
+		Scanner in = new Scanner(System.in);
+		int first=0,second=0;
+		try {
+			first = in.nextInt();
+			second = in.nextInt();
+		}
+		catch(InputMismatchException ime) {
+			System.out.println("Please Enter numerics only");
+			System.exit(1);
+		}
+		BiggestOfTwo big = new BiggestOfTwo();
+		System.out.println(big.biggest(first,second)+" is greater");
+
+	}
+	public int biggest(int first,int second) {
+		return (first > second)?first:second;
+	}
+
+}
