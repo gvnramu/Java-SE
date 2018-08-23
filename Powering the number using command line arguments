@@ -1,0 +1,15 @@
+//Program to print the Power of the number using command line arguments
+class Power {
+	public static void main(String args[]) {
+	
+		int nums[] = new int[args.length];
+		for(int i = 0;i < args.length; i++) {
+			nums[i] = Integer.parseInt(args[i]);
+		}
+		int power = 1;
+		for(int i = 0;i < nums[1];i++) {
+			power *= nums[0];
+		}
+		System.out.println(power);
+	}
+}
