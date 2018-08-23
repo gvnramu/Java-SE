@@ -1,0 +1,17 @@
+// Write a function to print numbers between the range ( say  10 to 100 OR 100 to 200 etc.,)
+import java.util.Scanner;
+public class RangePrinting {
+
+	public static void main(String[] args) {
+		Scanner in = new Scanner(System.in);
+		int start = in.nextInt();
+		int end = in.nextInt();
+		printRange(start,end);
+	}
+	public static void printRange(int start,int end) {
+		for(int i = start;i <= end ;i++) {
+			System.out.print(i+" ");
+			
+		}
+	}
+}
