@@ -1,0 +1,21 @@
+//Write a function to add two numbers
+import java.util.InputMismatchException;
+import java.util.Scanner;
+public class AddTwoNumbers {
+	public static void main(String[] args) {
+		Scanner in = new Scanner(System.in);
+		System.out.println("Enter two numbers to add");
+		try {
+			private long firstNumber = in.nextLong();
+			private long secondNumber  = in.nextLong();
+                                   System.out.println(firstNumber+" + "+secondNumber+" = "+add(firstNumber,secondNumber));
+		}
+		catch(InputMismatchException ime) {
+			System.out.println("Please enter numerics only");
+			System.exit(1);
+		}
+	}
+	private static long add(long first,long second) {
+		return first + second;
+	}
+}
