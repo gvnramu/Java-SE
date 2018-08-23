@@ -1,0 +1,19 @@
+//Write a function to find whether the give number is even or not
+import java.util.Scanner;
+public class EvenOrOdd {
+
+	public static void main(String[] args) {
+		Scanner in = new Scanner(System.in);
+		int number = in.nextInt();
+		EvenOrOdd e = new EvenOrOdd();
+		System.out.println(number +" is " +e.evenOrOdd(number));
+
+	}
+	public String evenOrOdd(int number) {
+		if(number % 2 == 0)
+			return "Even";
+		else
+			return "Odd";
+	}
+
+}
