@@ -1,0 +1,28 @@
+//Interchange the array elements 
+import java.util.Scanner;
+class InterChange {
+	public static void main(String args[]) {
+		Scanner in = new Scanner(System.in);
+		int n = in.nextInt();
+		int num[] = new int[n],a=0;
+		for(int i = 0; i< n;i++) {
+			num[i] = in.nextInt();
+		}
+		num=interChange(num);
+		for(int i:num) {
+			System.out.print(i+" ");
+		
+		}
+			
+	}
+	public static int[] interChange(int[] num){
+		int t=0;
+		int n = num.length/2;
+		for(int i = 0; i < n;i++){
+			t = num[i];
+			num[i] = num[n+i];
+			num[n+i] = t;
+		}
+		return num;
+	}
+}
