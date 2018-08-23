@@ -1,0 +1,22 @@
+//Program to find GCD of two numbers
+import java.util.Scanner;
+class GCD {
+	public static void main(String args[]) {
+		Scanner in = new Scanner(System.in);
+		int first = in.nextInt();
+		int second = in.nextInt();
+		System.out.println("The GCD is "+gcd(first,second));
+		
+	
+	}
+	public static int gcd(int first,int second){
+		int n=0;
+		n = first > second?second:first;
+		for(int i = n;i >= 1;i--) {
+			if( first%i == 0 && second%i == 0) {
+				return i;
+			}
+		}
+		return 1;
+	}
+}
