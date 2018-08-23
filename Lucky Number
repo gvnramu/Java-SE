@@ -1,0 +1,29 @@
+/* Write a function to get lucky number of given number
+a.Lucky number => sum of individual digits of given number
+b.If the sum is more than 9, again do sum of individual digits of this sum.
+i.i/p :12345=>6( i.e., 1+2+3+4+5 = 15,1+5 = 6) */
+
+import java.util.Scanner;
+
+public class LuckyNumber {
+
+	public static void main(String[] args) {
+		Scanner in = new Scanner(System.in);
+		int n = in.nextInt(),sum=0;
+		int s = n;
+		while(s > 9) {
+			s = sum(s);
+		}
+		System.out.println(s);
+	}
+	public static int sum(int n) {
+		int sum=0;
+		while(n!=0) {
+			sum+=n%10;
+			n/=10;
+			
+		}
+		return sum;
+	}
+
+}
